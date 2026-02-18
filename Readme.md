@@ -849,3 +849,70 @@ Common issues and fixes are documented in `docs/troubleshooting.md` and include:
 - Creating project proposals
 
 ---
+
+## Structured Version Control Workflow
+
+This repository follows a structured Git workflow so that changes are traceable, reviewable, and safe to integrate.
+
+### 1) Branching Strategy
+
+- `main` is the stable branch and should always remain deployable.
+- All new work is done in focused branches and merged through pull requests.
+- Direct pushes to `main` are avoided for feature work.
+
+Branch naming pattern used:
+
+- `feature/<scope>` for new work
+- `docs/<scope>` for documentation-only updates
+- `fix/<scope>` for bug fixes
+- `chore/<scope>` for maintenance
+
+Examples:
+
+- `feature/git-workflow-guidelines`
+- `docs/sprint3-submission-notes`
+
+### 2) Commit Message Convention
+
+Commits should communicate intent, not just changed files.
+
+Preferred format:
+
+`<type>: <clear action and purpose>`
+
+Common types:
+
+- `feat`
+- `fix`
+- `docs`
+- `chore`
+- `refactor`
+
+Good examples:
+
+- `docs: add sprint 3 branching and commit conventions`
+- `feat: add kubernetes rollout failure-state explanation`
+- `fix: correct image tag flow in architecture diagram`
+
+### 3) Pull Request Expectations
+
+Each PR should represent one logical unit of work and include:
+
+- A clear title describing intent
+- A short summary of what changed
+- Why the change was needed
+- Screenshots when relevant
+- Linked branch that matches the naming strategy
+
+PR review checklist:
+
+- [ ] Branch name is purposeful
+- [ ] Commits are meaningful and focused
+- [ ] Changes are related (no mixed unrelated updates)
+- [ ] README/repo organization remains clear
+
+### 4) Repository Organization
+
+- `Readme.md` contains learning documentation and contribution workflow guidance.
+- `screenshots/` stores visual references used in documentation and PR context.
+
